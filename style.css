@@ -265,8 +265,9 @@ p {
 }
 
 /* Hero section Styles */
+
 #hero {
-	height: 100vh;
+	height: 90vh;
 	width: 100%;
 	padding-top: 10rem;
 }
@@ -281,6 +282,9 @@ p {
 }
 #hero .container .right {
 	flex: 8;
+	animation-name: fadeIn;
+	animation-duration: 1.5s;
+	animation-timing-function: ease-in-out;
 }
 
 #hero .left .subheading {
@@ -309,6 +313,10 @@ p {
 	position: relative;
 	bottom: -70px;
 	animation: reveal 1s ease-in-out forwards;
+}
+
+#hero .heroimg {
+	
 }
 @keyframes reveal {
 	0% {
@@ -1067,6 +1075,19 @@ p {
 	overflow: auto;
 	background-color: black;
   }
+
+  .videomodal {
+	display: none;
+	position: fixed;
+	z-index: 3;
+	padding-top: 100px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: black;
+  }
   
   /* Modal Content */
   .modal-content {
@@ -1078,13 +1099,22 @@ p {
 	width: 90%;
 	max-width: 1200px;
   }
+
+  .videomodal-content {
+	z-index: 4;
+	position: relative;
+	margin: 0 0% 0 20%;
+	padding: 0;
+	width: 100%;
+	max-width: 1200px;
+  }
   
   /* The Close Button */
   .close {
 	color: white;
 	position: absolute;
 	top: 10px;
-	right: 25px;
+	left: 25px;
 	font-size: 35px;
 	font-weight: bold;
   }
@@ -1097,7 +1127,7 @@ p {
   }
   
   /* Hide the slides by default */
-  .mySlides {
+  .mySlides, .mySlides2, .mySlides3, .mySlides4 {
 	display: none;
   }
   
@@ -1164,3 +1194,4 @@ p {
   .hover-shadow:hover {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
+

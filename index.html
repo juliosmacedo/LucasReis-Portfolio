@@ -7,6 +7,9 @@
   <title>Lucas Reis - Portfolio</title>
   <link rel="shortcut icon" href="./image/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+ />
 </head>
 
 <body>
@@ -36,8 +39,8 @@
         <ul>
           <li><a data-text="Home" href="./index.html#hero">Home</a></li>
           <li><a data-text="About" href="./index.html#about">About</a></li>
-          <li><a data-text="Projects" href="./index.html#projects">Projects</a></li>
-          <li><a data-text="Contact" href="./contact.html">Contact</a></li>
+          <li><a data-text="Projects" href="./index.html#projects">Portfolio</a></li>
+          <li><a data-text="Contact" href="./contact.html">Contato</a></li>
         </ul>
       </nav>
     </div>
@@ -65,7 +68,7 @@
         </div>
       </div>
       <div class="right">
-        <img src="https://i.imgur.com/eLQzFc8.jpg" alt="">
+        <img class="heroimg" src="https://i.imgur.com/eLQzFc8.jpg" alt="">
       </div>
     </div>
   </section>
@@ -213,7 +216,7 @@
             <h3 class="project-sub-title">Mostra de Cinema</h3>
             <p class="project-desc">Elaboração de identidade visual para a Retrospectiva Cine Inconfidentes 2020.</p>
             <div class="buttons">
-              <a href="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/6dbe0a108151685.5fb722e14a9e3.jpg" class="primary-btn">Mais</a>
+              <a onclick="openModal3()" class="primary-btn">Mais</a>
               <!-- <a href="#" class="primary-btn outline external-link"> <span>Preview</span>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -237,7 +240,7 @@
             <p class="project-desc">Animações e Motion Graphics feitas em Adobe After Effects para diversos clientes, de 2019 a 2022</p>
             <div class="buttons">
               <!-- <a href="https://vimeo.com/481779229" class="primary-btn">Assista</a> -->
-              <a href="https://vimeo.com/481779229" class="primary-btn outline external-link"> <span>Assista</span>
+              <a onclick="openModal4()" class="primary-btn outline external-link"> <span>Assista</span>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
@@ -268,11 +271,11 @@
           </ul>
         </div>
         <div class="col-3">
-          <h2 class="column-heading">Contact<br>Info</h2>
+          <h2 class="column-heading">Contato</h2>
           <ul>
-            <li><a href="#">lucasreis91@gmail.com</a></li>
-            <li><a href="#">+55 31 8884-1134</a></li>
-            <li><a href="#">Itabirito, MG - Brasil</a></li>
+            <li><a>lucasreis91@gmail.com</a></li>
+            <li><a>+55 31 8884-1134</a></li>
+            <li><a>Itabirito, MG - Brasil</a></li>
           </ul>
         </div>
         <div class="col-4">
@@ -301,24 +304,24 @@
   <span class="close cursor" onclick="closeModal()">&times;</span>
   <div class="modal-content">
 
-    <div class="mySlides">
+    <div class="mySlides" id="slide1">
       <div class="numbertext">1 / 4</div>
-      <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/191080134454675.61d5e9e9ad898.png" style="width:100%">
+      <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/0cf43d134454675.61d5e9e9b0c98.png" style="width:100%">
     </div>
 
     <div class="mySlides">
       <div class="numbertext">2 / 4</div>
-      <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/39fd15134454675.61d5e9e9b04aa.png" style="width:100%">
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">3 / 4</div>
       <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/8abcff134454675.61d5e9e9ae00d.png" style="width:100%">
     </div>
 
     <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/39fd15134454675.61d5e9e9b04aa.png" style="width:100%">
+    </div>
+
+    <div class="mySlides">
       <div class="numbertext">4 / 4</div>
-      <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/0cf43d134454675.61d5e9e9b0c98.png" style="width:100%">
+      <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/191080134454675.61d5e9e9ad898.png" style="width:100%">
     </div>
 
     <!-- Next/previous controls -->
@@ -327,84 +330,153 @@
 
     <!-- Caption text -->
     <div class="caption-container">
-      <p id="caption"></p>
+      <p id="caption">TESTE</p>
     </div>
 
     <!-- Thumbnail image controls -->
     <div class="column">
-      <img class="demo" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/191080134454675.61d5e9e9ad898.png" onclick="currentSlide(1)" alt="Nature">
+      <img class="demo" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/0cf43d134454675.61d5e9e9b0c98.png" onclick="currentSlide(1)" alt="Nature">
     </div>
 
     <div class="column">
-      <img class="demo" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/39fd15134454675.61d5e9e9b04aa.png" onclick="currentSlide(2)" alt="Snow">
+      <img class="demo" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/8abcff134454675.61d5e9e9ae00d.png" onclick="currentSlide(2)" alt="Snow">
     </div>
 
     <div class="column">
-      <img class="demo" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/8abcff134454675.61d5e9e9ae00d.png" onclick="currentSlide(3)" alt="Mountains">
+      <img class="demo" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/39fd15134454675.61d5e9e9b04aa.png" onclick="currentSlide(3)" alt="Mountains">
     </div>
 
     <div class="column">
-      <img class="demo" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/0cf43d134454675.61d5e9e9b0c98.png" onclick="currentSlide(4)" alt="Lights">
+      <img class="demo" src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/191080134454675.61d5e9e9ad898.png" onclick="currentSlide(4)" alt="Lights">
     </div>
   </div>
 </div>
+
+
+
+<!-- TODO: MODAL DOIS E TRES BUGADOS, DE FORMA DIFERENTE. UM TEM UM SLIDE A MAIS, OUTRO UM A MENOS. BUG DO MILENIO -->
+
+
 
 <!-- MODAL DOIS -->
 <div id="myModal2" class="modal">
   <span class="close cursor" onclick="closeModal2()">&times;</span>
   <div class="modal-content">
 
-    <div class="mySlides">
+    <div class="mySlides2" id="slide2">
       <div class="numbertext">1 / 4</div>
-      <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/e00715134460225.61d602fe7e118.png" style="width:100%">
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">2 / 4</div>
       <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/d8fbfd134460225.61d602fe21d4b.png" style="width:100%">
     </div>
 
-    <div class="mySlides">
+    <div class="mySlides2">
+      <div class="numbertext">2 / 4</div>
+      <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/768db8134460225.61d5ff98c9e40.png" style="width:100%">
+    </div>
+
+    <div class="mySlides2">
       <div class="numbertext">3 / 4</div>
       <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/a1240c134460225.61d5ff98c9615.png" style="width:100%">
     </div>
 
-    <div class="mySlides">
+    <div class="mySlides2">
       <div class="numbertext">4 / 4</div>
-      <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/33948c134460225.61d602fe7d333.png" style="width:100%">
+      <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/524e9a134460225.61d5ff98ca3ff.png" style="width:100%">
     </div>
 
     <!-- Next/previous controls -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <a class="prev" onclick="plusSlides2(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides2(1)">&#10095;</a>
 
     <!-- Caption text -->
     <div class="caption-container">
-      <p id="caption"></p>
+      <p id="caption">TESTE</p>
     </div>
 
     <!-- Thumbnail image controls -->
     <div class="column">
-      <img class="demo" src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/e00715134460225.61d602fe7e118.png" onclick="currentSlide(1)" alt="Nature">
+      <img class="demo" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/d8fbfd134460225.61d602fe21d4b.png" onclick="currentSlide2(1)" alt="Nature">
     </div>
 
     <div class="column">
-      <img class="demo" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/d8fbfd134460225.61d602fe21d4b.png" onclick="currentSlide(2)" alt="Snow">
+      <img class="demo" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/768db8134460225.61d5ff98c9e40.png" onclick="currentSlide2(2)" alt="Snow">
     </div>
 
     <div class="column">
-      <img class="demo" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/a1240c134460225.61d5ff98c9615.png" onclick="currentSlide(3)" alt="Mountains">
+      <img class="demo" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/a1240c134460225.61d5ff98c9615.png" onclick="currentSlide2(3)" alt="Mountains">
     </div>
 
     <div class="column">
-      <img class="demo" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/33948c134460225.61d602fe7d333.png" onclick="currentSlide(4)" alt="Lights">
+      <img class="demo" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/524e9a134460225.61d5ff98ca3ff.png" onclick="currentSlide2(4)" alt="Lights">
     </div>
   </div>
 </div>
 
 
-<!-- 
-TODO: Classe "MySlides" esta dando problema. Provavelmente precise fazer uma function para cada maldito modal.
-Nao abre a figura toda quando clica no modal.  -->
+
+<!-- MODAL TRES -->
+<div id="myModal3" class="modal">
+  <span class="close cursor" onclick="closeModal3()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides3" id="slide3">
+      <div class="numbertext">1 / 4</div>
+      <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/6dbe0a108151685.5fb722e14a9e3.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides3">
+      <div class="numbertext">2 / 4</div>
+      <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5ca6cd108151685.5fb722e0d0974.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides3">
+      <div class="numbertext">3 / 4</div>
+      <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/61cbd3108151685.5fb722e0cf9a9.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides3">
+      <div class="numbertext">4 / 4</div>
+      <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/1f3795108151685.5fb722e0d017c.jpg" style="width:100%">
+    </div>
+
+    <!-- Next/previous controls -->
+    <a class="prev" onclick="plusSlides3(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides3(1)">&#10095;</a>
+
+    <!-- Caption text -->
+    <div class="caption-container">
+      <p id="caption">TESTE</p>
+    </div>
+
+    <!-- Thumbnail image controls -->
+    <div class="column">
+      <img class="demo" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/6dbe0a108151685.5fb722e14a9e3.jpg" onclick="currentSlide3(1)" alt="Nature">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5ca6cd108151685.5fb722e0d0974.jpg" onclick="currentSlide3(2)" alt="Snow">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/61cbd3108151685.5fb722e0cf9a9.jpg" onclick="currentSlide3(3)" alt="Mountains">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/1f3795108151685.5fb722e0d017c.jpg" onclick="currentSlide3(4)" alt="Lights">
+    </div>
+  </div>
+</div>
+
+
+
+<!-- MODAL QUATRO -->
+<div id="myModal4" class="videomodal">
+  <span class="close cursor" onclick="closeModal4()">&times;</span>
+  <div class="videomodal-content">
+    <iframe src="https://player.vimeo.com/video/481779229?h=bbc3d9dad3" width="970" height="548" frameborder="0"allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+  </div>
+</div>
+
+
+
 
 </html>
